@@ -1,16 +1,15 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { Heading, Text } from '@chakra-ui/core';
+import { Layout } from '../components/Layout';
+import { NextChakraLink } from '../components/NextChakraLink';
 
 const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>This is the about page</p>
-    <p>
-      <Link href="/">
-        <a>Go home</a>
-      </Link>
-    </p>
+  <Layout title='About | nonstarter'>
+    <Heading size='sm'>About</Heading>
+    <Text>This is the about page</Text>
+    <Text>
+      <NextChakraLink href='/'>Go home</NextChakraLink>
+    </Text>
   </Layout>
-)
+);
 
-export default AboutPage
+export default AboutPage;
