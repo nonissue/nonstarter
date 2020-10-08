@@ -5,17 +5,21 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "migratedb": "dotenv -- yarn prisma migrate save --experimental && yarn prisma migrate up --experimental && yarn prisma generate",
+    "studio": "dotenv -- npx prisma studio"
   },
   "dependencies": {
     "@chakra-ui/core": "^1.0.0-rc.5",
     "@chakra-ui/theme": "^1.0.0-rc.5",
+    "@prisma/client": "^2.8.1",
     "heroicons-react": "^1.3.0",
     "next": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "@prisma/cli": "^2.8.1",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",

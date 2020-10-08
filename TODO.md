@@ -2,16 +2,17 @@
 
 ## Todo:
 
-- [ ] Add .vscode folder with tasks
-- [ ] Add Chakra-UI, configured for next
+- [x] Add .vscode folder with tasks
+- [x] Add Chakra-UI, configured for next
 - [ ] Add prisma + sqlite
 - [ ] Add default components
-  - [ ] NextLinkChakra
-  - [ ] Layout
-  - [ ] Header
-  - [ ] Footer
+  - [x] NextLinkChakra
+  - [x] Layout
+  - [x] Header
+  - [x] Footer
 - [ ] Add basic tests
 - [ ] Simple tests
+- [ ] Add auth?
 
 ## Possible Additions:
 

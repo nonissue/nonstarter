@@ -12,10 +12,7 @@
       "presentation": {
         "group": "dev"
       },
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      "group": "build"
     },
     {
       "type": "npm",
@@ -41,7 +38,11 @@
       "label": "start dev",
       "dependsOn": ["yarn: dev", "prisma: studio"],
       "problemMatcher": [],
-      "detail": "starts nextjs and prisma studio"
+      "detail": "starts nextjs and prisma studio",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }
