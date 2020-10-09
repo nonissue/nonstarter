@@ -2,7 +2,7 @@ import { NextChakraLink } from "./NextChakraLink";
 import { Flex } from "@chakra-ui/core";
 import { ColorModeToggle } from "./ColorModeToggle";
 
-export const Nav = () => (
+export const Nav: React.FunctionComponent = () => (
   <Flex
     flexDirection="row"
     justifyContent="space-between"

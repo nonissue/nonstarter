@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { NextApiRequest, NextApiResponse } from "next";
 import { sampleUserData } from "../../../utils/sample-data";
 

@@ -8,7 +8,9 @@ import { Moon, Sun } from "heroicons-react";
 
 type ColorModeSwitcherProps = Omit<IconButtonProps, "aria-label">;
 
-export const ColorModeToggle = (props: ColorModeSwitcherProps) => {
+export const ColorModeToggle: React.FunctionComponent = (
+  props: ColorModeSwitcherProps
+) => {
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue("dark", "light");
   const SwitchIcon = useColorModeValue(Sun, Moon);

@@ -10,7 +10,7 @@ import { NextChakraLink } from "../components/NextChakraLink";
 // }
 
 // const IndexPage = ({ cookies }: IndexProps) => (
-const IndexPage = () => (
+const IndexPage: React.FunctionComponent = () => (
   // <Chakra cookies={cookies}>
   <Layout>
     <Box fontSize="md">

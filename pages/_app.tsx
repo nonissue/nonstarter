@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import type { NextComponentType, NextPageContext } from 'next';
 import type { NextRouter } from 'next/router';
 
@@ -11,10 +12,12 @@ export interface AppRenderProps {
   cookies?: string;
 }
 
-export default function App({ Component, pageProps, cookies }: AppRenderProps) {
+const App: React.FunctionComponent<AppRenderProps> = ({ Component, pageProps, cookies }) => {
   return (
     <Chakra cookies={cookies}>
       <Component {...pageProps} />
     </Chakra>
   );
 }
+
+export default App;

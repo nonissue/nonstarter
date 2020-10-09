@@ -9,7 +9,7 @@ type Props = {
   title?: string;
 };
 
-export const Layout = ({ children }: Props) => (
+export const Layout: React.FunctionComponent<Props> = ({ children }) => (
   <Box maxWidth="900px" mx="auto">
     <Header />
 

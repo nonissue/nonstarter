@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Nav } from "./Nav";
 import { Flex, Heading } from "@chakra-ui/core";
 
-export const Header = () => (
+export const Header: React.FunctionComponent = () => (
   <>
     <Head>
       <title>NONSTARTER</title>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { ColorModeScript } from "@chakra-ui/core";
 import NextDocument, {
   Html,
