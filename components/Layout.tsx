@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react';
-import { Header } from './Header';
-import { Box } from '@chakra-ui/core';
+import React, { ReactNode } from "react";
+import { Header } from "./Header";
+import { Box } from "@chakra-ui/core";
 // import Link from 'next/link';
 // import Head from 'next/head';
 
@@ -10,7 +10,7 @@ type Props = {
 };
 
 export const Layout = ({ children }: Props) => (
-  <Box maxWidth='900px' mx='auto'>
+  <Box maxWidth="900px" mx="auto">
     <Header />
 
     {children}

@@ -1,6 +1,6 @@
 # Non-Starter
 
-## Todo:
+## Todo
 
 - [x] Add .vscode folder with tasks
 - [x] Add Chakra-UI, configured for next
@@ -14,7 +14,7 @@
 - [ ] Simple tests
 - [ ] Add auth?
 
-## Possible Additions:
+## Possible Additions
 
 - [ ] SWR or React Query
 - [ ] React-hook-form
