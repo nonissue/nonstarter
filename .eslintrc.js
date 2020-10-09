@@ -1,4 +1,5 @@
 // .eslintrc.js
+// https://paulintrognon.fr/blog/post/typescript-prettier-eslint-next-js
 module.exports = {
   root: true,
   parser: "@typescript-eslint/parser", // the TypeScript parser we installed earlier

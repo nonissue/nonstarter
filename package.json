@@ -7,7 +7,8 @@
     "start": "next start",
     "type-check": "tsc",
     "migratedb": "dotenv -- yarn prisma migrate save --experimental && yarn prisma migrate up --experimental && yarn prisma generate",
-    "studio": "dotenv -- npx prisma studio"
+    "studio": "dotenv -- npx prisma studio",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .ts,.tsx ."
   },
   "dependencies": {
     "@chakra-ui/core": "^1.0.0-rc.5",
