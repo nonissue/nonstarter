@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import type { NextComponentType, NextPageContext } from 'next';
-import type { NextRouter } from 'next/router';
-
 import { Chakra } from '../Chakra';
 
+import type { NextComponentType, NextPageContext } from 'next';
+import type { NextRouter } from 'next/router';
 export interface AppRenderProps {
   pageProps: object;
   err?: Error;

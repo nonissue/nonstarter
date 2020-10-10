@@ -1,6 +1,8 @@
-import React, { ReactNode } from "react";
-import { Header } from "./Header";
 import { Box } from "@chakra-ui/core";
+import React, { ReactNode } from "react";
+
+import { Header } from "./Header";
+
 // import Link from 'next/link';
 // import Head from 'next/head';
 
@@ -10,7 +12,7 @@ type Props = {
 };
 
 export const Layout: React.FunctionComponent<Props> = ({ children }) => (
-  <Box maxWidth="900px" mx="auto">
+  <Box>
     <Header />
 
     {children}

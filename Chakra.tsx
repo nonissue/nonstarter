@@ -1,10 +1,12 @@
 import {
   ChakraProvider,
   cookieStorageManager,
-  localStorageManager
+  localStorageManager,
+  resetCSS
 } from "@chakra-ui/core";
 import { GetServerSidePropsContext } from "next";
 import { ReactNode } from "react";
+import theme from "./theme";
 
 interface ChakraProps {
   cookies?: string;
@@ -17,9 +19,11 @@ export const Chakra: React.FunctionComponent<ChakraProps> = ({
 }: ChakraProps) => {
   return (
     <ChakraProvider
+      resetCSS
       colorModeManager={
         cookies ? cookieStorageManager(cookies) : localStorageManager
       }
+      theme={theme}
     >
       {children}
     </ChakraProvider>

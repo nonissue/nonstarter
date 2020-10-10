@@ -1,34 +1,47 @@
+import { Box, Heading, Stack, Text } from "@chakra-ui/core";
 import Head from "next/head";
+
 import { Nav } from "./Nav";
-import { Flex, Heading } from "@chakra-ui/core";
 
 export const Header: React.FunctionComponent = () => (
   <>
     <Head>
-      <title>NONSTARTER</title>
+      <title>nonstarter</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
-      <Flex
-        flexDirection="row"
-        justifyContent="space-around"
-        alignItems="center"
-        // p={[0, 6]}
-        p={[6, 6, 6, 6]}
-        px={[6, 6, 3, 0]}
-        // px={0}
-        mt={[0, 8]}
-        mb={8}
-        // border='2px'
-        mx="auto"
-        // maxWidth='900px'
-      >
-        <Heading fontSize={["xl", "xl", "3xl", "3xl"]} mr={12}>
-          nonstarter
-        </Heading>
-        <Nav />
-      </Flex>
-    </header>
+    <Box shadow="md" mb="6" as="header">
+      <Box maxW="700px" mx="auto">
+        <Stack
+          isInline
+          justifyContent="space-between"
+          alignItems="center"
+          py={4}
+        >
+          <Box>
+            <Stack
+              isInline
+              spacing={0}
+              fontSize={["xl", "xl", "2xl", "2xl"]}
+              fontFamily={"mono"}
+              fontWeight="300"
+              mr={12}
+            >
+              <Text fontFamily="DM Sans" fontWeight="700">
+                non
+              </Text>
+              <Text fontFamily="DM Sans" fontStyle="">
+                starter
+              </Text>
+            </Stack>
+          </Box>
+          <Box>
+            <Nav />
+          </Box>
+        </Stack>
+      </Box>
+    </Box>
+    {/* </Flex> */}
+    {/* </header> */}
   </>
 );

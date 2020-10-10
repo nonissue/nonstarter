@@ -1,4 +1,5 @@
 import { Heading, Text } from "@chakra-ui/core";
+
 import { Layout } from "../components/Layout";
 import { NextChakraLink } from "../components/NextChakraLink";
 

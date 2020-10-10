@@ -1,8 +1,8 @@
 import {
-  useColorMode,
-  useColorModeValue,
   IconButton,
-  IconButtonProps
+  IconButtonProps,
+  useColorMode,
+  useColorModeValue
 } from "@chakra-ui/core";
 import { Moon, Sun } from "heroicons-react";
 
