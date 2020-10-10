@@ -42,6 +42,7 @@ export default extendTheme({
   components: {
     Link: {
       variants: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         link: (props: any) => ({
           color: mode("yellow.700", "yellow.300")(props),
         }),
