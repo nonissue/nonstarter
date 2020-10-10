@@ -1,8 +1,7 @@
 import {
   ChakraProvider,
   cookieStorageManager,
-  localStorageManager,
-  resetCSS
+  localStorageManager
 } from "@chakra-ui/core";
 import { GetServerSidePropsContext } from "next";
 import { ReactNode } from "react";
