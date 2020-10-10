@@ -14,15 +14,17 @@ export const Header: React.FunctionComponent = () => (
         flexDirection="row"
         justifyContent="space-around"
         alignItems="center"
-        p={12}
-        px={0}
+        // p={[0, 6]}
+        p={[6, 6, 6, 6]}
+        px={[6, 6, 3, 0]}
+        // px={0}
         mt={[0, 8]}
         mb={8}
         // border='2px'
         mx="auto"
         // maxWidth='900px'
       >
-        <Heading size="lg" mr={12}>
+        <Heading fontSize={["xl", "xl", "3xl", "3xl"]} mr={12}>
           nonstarter
         </Heading>
         <Nav />

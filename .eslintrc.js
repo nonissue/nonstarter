@@ -1,5 +1,8 @@
 // .eslintrc.js
 // https://paulintrognon.fr/blog/post/typescript-prettier-eslint-next-js
+// https://www.npmjs.com/package/eslint-config-nextjs
+// https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest
+// eslint-disable-next-line no-undef
 module.exports = {
   root: true,
   parser: "@typescript-eslint/parser", // the TypeScript parser we installed earlier
