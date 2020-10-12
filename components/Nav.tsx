@@ -27,9 +27,10 @@ export const Nav: React.FunctionComponent = () => {
         {showBurger ? (
           <Stack isInline spacing={6} alignItems="center" fontWeight="semibold">
             <NextChakraLink href="/">Home</NextChakraLink>
+            <NextChakraLink href="/posts">Posts</NextChakraLink>
+            <NextChakraLink href="/users">Users</NextChakraLink>
             <NextChakraLink href="/about">About</NextChakraLink>
-            <NextChakraLink href="/users">Users List</NextChakraLink>
-            <a href="/api/users">Users API</a>
+
             <ColorModeToggle />
           </Stack>
         ) : (

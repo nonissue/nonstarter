@@ -1,4 +1,12 @@
-import { Box, Heading, Stack, Text } from "@chakra-ui/core";
+import {
+  Box,
+  Heading,
+  Stack,
+  Text,
+  Divider,
+  Alert,
+  AlertIcon
+} from "@chakra-ui/core";
 
 import { Layout } from "../components/Layout";
 import { NextChakraLink } from "../components/NextChakraLink";
@@ -6,9 +14,13 @@ import { NextChakraLink } from "../components/NextChakraLink";
 const IndexPage: React.FunctionComponent = () => (
   // <Chakra cookies={cookies}>
   <Layout>
-    <Box maxW="700px" mx="auto">
+    <Box maxW="min(65ch, 100%)" mx="auto">
       <Stack spacing={3}>
         <Heading size="lg">Info</Heading>
+        <Alert status="warning">
+          <AlertIcon />
+          This project is in its infancy.
+        </Alert>
         <Text fontFamily={"body"}>
           A modern starting point for web dev, featuring next.js, chakra-ui,
           prisma and more. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -19,23 +31,18 @@ const IndexPage: React.FunctionComponent = () => (
           elit lacinia id. Morbi sed neque ante. Etiam ligula dui, congue sed
           malesuada sed, accumsan nec sem.
         </Text>
-        <Stack isInline>
+        <Divider />
+        <Stack isInline fontFamily="mono">
           <Text>
-            <NextChakraLink href="/about" color="teal.500">
-              Features
-            </NextChakraLink>
+            <NextChakraLink href="/about">Features</NextChakraLink>
           </Text>
           <Text>•</Text>
           <Text>
-            <NextChakraLink href="/about" color="teal.500">
-              Docs
-            </NextChakraLink>
+            <NextChakraLink href="/about">Docs</NextChakraLink>
           </Text>
           <Text>•</Text>
           <Text>
-            <NextChakraLink href="/about" color="teal.500">
-              Changelog
-            </NextChakraLink>
+            <NextChakraLink href="/about">Changelog</NextChakraLink>
           </Text>
         </Stack>
       </Stack>

@@ -1,5 +1,5 @@
-import * as React from "react";
-import ListItem from "./ListItem";
+import { List as ChakraList, ListItem } from "@chakra-ui/core";
+import { NextChakraLink } from "./NextChakraLink";
 import { User } from "../interfaces";
 
 type Props = {
@@ -7,13 +7,15 @@ type Props = {
 };
 
 const List: React.FunctionComponent<Props> = ({ items }) => (
-  <ul>
+  <ChakraList>
     {items.map(item => (
-      <li key={item.id}>
-        <ListItem data={item} />
-      </li>
+      <ListItem key={item.id}>
+        <NextChakraLink fontWeight="bold" href={`/users/${item.id}`}>
+          {item.id}: {item.name}
+        </NextChakraLink>
+      </ListItem>
     ))}
-  </ul>
+  </ChakraList>
 );
 
 export default List;

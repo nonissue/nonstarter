@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
+import { Heading, Grid, Text } from "@chakra-ui/core";
 
 import { User } from "../../interfaces";
 import { sampleUserData } from "../../utils/sample-data";
@@ -11,18 +12,29 @@ type Props = {
 };
 
 const WithStaticProps: React.FunctionComponent<Props> = ({ items }) => (
-  <Layout title="Users List | Next.js + TypeScript Example">
-    <h1>Users List</h1>
-    <p>
-      Example fetching data from inside <code>getStaticProps()</code>.
-    </p>
-    <p>You are currently on: /users</p>
-    <List items={items} />
-    <p>
-      <Link href="/">
-        <a>Go home</a>
-      </Link>
-    </p>
+  <Layout title="Users">
+    <Grid
+      templateColumns={`1fr min(65ch, 100%) 1fr`}
+      sx={{
+        "& > *": {
+          gridColumn: 2
+        }
+      }}
+    >
+      <Heading size="lg">Users List</Heading>
+
+      <Text sx={{ "&": { gridColumn: "-1 / 1", width: "100%" } }}>
+        Example fetching data from inside <code>getStaticProps()</code>. <br />
+        THIS IS FULL BLEED
+      </Text>
+      <Text>You are currently on: /users</Text>
+      <List items={items} />
+      <Text>
+        <Link href="/">
+          <a>Go home</a>
+        </Link>
+      </Text>
+    </Grid>
   </Layout>
 );
 

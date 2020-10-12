@@ -11,7 +11,7 @@ export const Header: React.FunctionComponent = () => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <Box shadow="md" mb="6" as="header">
-      <Box maxW="700px" mx="auto">
+      <Box maxW="min(65ch, 100%)" mx="auto">
         <Stack
           isInline
           justifyContent="space-between"
