@@ -13,8 +13,8 @@ type PostsProps = {
 const posts: React.FunctionComponent<PostsProps> = () => {
   return (
     <Layout>
-      <Grid templateColumns={`1fr min(65ch, 100%) 1fr`} px="2">
-        <Grid column="2" my="2">
+      <Grid templateColumns={`1fr min(65ch, 100%) 1fr`}>
+        <Grid column="2" my="2" px="2">
           <Heading>Post 1</Heading>
           <Text>
             A modern starting point for web dev, featuring next.js, chakra-ui,
@@ -27,7 +27,7 @@ const posts: React.FunctionComponent<PostsProps> = () => {
             malesuada sed, accumsan nec sem.
           </Text>
         </Grid>
-        <Grid column="2" my="2">
+        <Grid column="2" my="2" px="2">
           <Heading>Post 2</Heading>
           <Text>
             A modern starting point for web dev, featuring next.js, chakra-ui,
@@ -45,11 +45,12 @@ const posts: React.FunctionComponent<PostsProps> = () => {
           w="100%"
           textColor="gray.100"
           background="gray.900"
-          p="4"
-          maxW="90%"
+          p={["2", "2", "4", "4"]}
+          pt={["2", "2", "2", "2"]}
+          // maxW="90%"
           m="auto"
           my="2"
-          pt="2"
+          maxW={["100%", "100%", "100%", "85%"]}
         >
           <Heading>Full-bleed Post 3</Heading>
           <Text>
@@ -63,7 +64,7 @@ const posts: React.FunctionComponent<PostsProps> = () => {
             malesuada sed, accumsan nec sem.
           </Text>
         </Grid>
-        <Grid column="2" my="2">
+        <Grid column="2" my="2" px="2">
           <Heading>Post 4</Heading>
           <Text>
             A modern starting point for web dev, featuring next.js, chakra-ui,
