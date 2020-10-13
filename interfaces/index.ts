@@ -8,3 +8,17 @@ export type User = {
   id: number;
   name: string;
 };
+
+export type Post = {
+  id: number;
+  title: string;
+  content: string;
+  author: string;
+  tags: string[];
+};
+
+export type Posts = {
+  id: number;
+  title: string;
+  posts: Post[];
+};

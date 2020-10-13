@@ -1,16 +1,10 @@
 import { Grid, Heading, Text } from "@chakra-ui/core";
 import { Layout } from "../../components/Layout";
+import { Post } from "../../interfaces";
 
 // Move to interfaces
-export type PostProps = {
-  id: number;
-  title: string;
-  content: string;
-  author: string;
-  tags: string[];
-};
 
-const post: React.FunctionComponent<PostProps> = () => {
+const post: React.FunctionComponent<Post> = () => {
   return (
     <Layout>
       <Grid templateColumns={`1fr min(65ch, 100%) 1fr`}>

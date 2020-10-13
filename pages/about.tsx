@@ -12,16 +12,21 @@ const AboutPage: React.FunctionComponent = () => (
           gridColumn: 2
         }
       }}
+      px={["4", "4", "2", "2"]}
       rowGap={3}
     >
-      <Heading size="lg">About</Heading>
+      <Grid>
+        <Heading mt="4" size="lg">
+          About
+        </Heading>
+      </Grid>
       {/* <Text sx={{ "&": { gridColumn: "-1 / 1" } }}>This is the about page</Text> */}
       <Text>This is the about page</Text>
-
-      <Divider />
-
+      <Grid>
+        <Divider />
+      </Grid>
       <Text>
-        <NextChakraLink href="/" fontFamily="mono" color="blue.800">
+        <NextChakraLink href="/" fontFamily="mono">
           Home
         </NextChakraLink>
       </Text>

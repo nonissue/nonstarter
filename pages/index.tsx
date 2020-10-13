@@ -3,6 +3,7 @@ import {
   Heading,
   Stack,
   Text,
+  Grid,
   Divider,
   Alert,
   AlertIcon
@@ -14,8 +15,8 @@ import { NextChakraLink } from "../components/NextChakraLink";
 const IndexPage: React.FunctionComponent = () => (
   // <Chakra cookies={cookies}>
   <Layout>
-    <Box maxW="min(65ch, 100%)" mx="auto">
-      <Stack spacing={3}>
+    <Grid maxW="min(65ch, 100%)" mx="auto" px={["4", "4", "2", "2"]} my="0">
+      <Stack spacing={3} my="4">
         <Heading size="lg">Info</Heading>
         <Alert status="warning">
           <AlertIcon />
@@ -48,7 +49,7 @@ const IndexPage: React.FunctionComponent = () => (
       </Stack>
       {/* </Grid> */}
       {/* </Box> */}
-    </Box>
+    </Grid>
   </Layout>
   // </Chakra>
 );

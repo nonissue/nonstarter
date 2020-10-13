@@ -4,18 +4,29 @@
 
 - [x] Add .vscode folder with tasks
 - [x] Add Chakra-UI, configured for next
-- [ ] Add prisma + sqlite
-- [ ] Add default components
+- [x] Add prisma + sqlite
+- [x] Add default components
   - [x] NextLinkChakra
   - [x] Layout
   - [x] Header
-  - [x] Footer
 - [ ] Add basic tests
 - [ ] Simple tests
 - [ ] Add auth?
+
+### Styling 
+
+- [ ] Abstract layout padding/width implementation to either component wrapper or reusable variable
+  - [ ] increase X padding on smaller viewports
+- [ ] Transitions/hover for links, menu
+
+### Functionality
+
+- [ ] Implement Mobile Nav
+- [ ] Footer
 
 ## Possible Additions
 
 - [ ] SWR or React Query
 - [ ] React-hook-form
-- [ ]
+
+
