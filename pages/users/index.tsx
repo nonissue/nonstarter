@@ -15,7 +15,7 @@ const WithStaticProps: React.FunctionComponent<Props> = ({ items }) => (
   <Layout title="Users">
     <Grid
       p={["4", "4", "6", "6"]}
-      px={0}
+      // px={0}
       pt={["4", "4", "5", "5"]}
       pb={["4", "4", "5", "5"]}
       // m="auto"
@@ -32,9 +32,10 @@ const WithStaticProps: React.FunctionComponent<Props> = ({ items }) => (
       </Heading>
 
       <Grid
-        mb={2}
         sx={{ "&": { gridColumn: "-1 / 1", width: "100%" } }}
+        m={["0", "0", "0", "auto"]}
         padding={0}
+        maxW="1600px"
       >
         {/* Example fetching data from inside <code>getStaticProps()</code>. <br />
         THIS IS FULL BLEED. Fullbleed doesn&apos;t work if padding set on parent
@@ -45,8 +46,22 @@ const WithStaticProps: React.FunctionComponent<Props> = ({ items }) => (
         />
       </Grid>
 
-      <Stack spacing={2}>
-        <Text>You are currently on: /users</Text>
+      <Stack spacing={2} mt={4}>
+        <Heading size="md">
+          Route:&nbsp;
+          <Text
+            display="inline"
+            fontWeight="300"
+            fontSize="lg"
+            borderBottom="2px"
+            borderColor="yellow.400"
+            fontStyle="normal"
+            fontFamily="mono"
+            verticalAlign="baseline"
+          >
+            /users
+          </Text>
+        </Heading>
         <List items={items} />
         <Divider />
         <Text fontFamily="mono">

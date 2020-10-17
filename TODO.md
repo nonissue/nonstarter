@@ -1,6 +1,6 @@
-# Non-Starter
+# Non-Starter Todo
 
-## Todo
+# Project
 
 - [x] Add .vscode folder with tasks
 - [x] Add Chakra-UI, configured for next
@@ -12,17 +12,30 @@
 - [ ] Add basic tests
 - [ ] Simple tests
 - [ ] Add auth?
+- [ ] Refactor style implementation to make it consistent sitewide, rather than hodgepodge of custom tweaks as it is ATM
 - [ ] Demo Content
   - [ ] Blog
 
+## Prisma
 
-### Components
+- [ ] Add Tags
+- [ ] Add Posts
 
-- [ ] Post
-- [ ] 
+## Components
 
+- [ ] Post *Is this strictly necessary? Maybe not*
+  - [ ] Display
+  - [ ] Create
+  - [ ] Edit
+- [ ] Dashboard
+  - [ ] Login
+  - [ ] Logout
+  - [ ] Signup
+- [ ] Tag Page
+- [ ] Footer
+- [x] Mobile Nav
 
-### Styling 
+## Styling 
 
 - [ ] Abstract layout padding/width implementation to either component wrapper or reusable variable
   - [ ] increase X padding on smaller viewports
@@ -32,15 +45,25 @@
   - [x] MobileNavBurger
   - [x] HeaderLink
 - [ ] Implement fullbleed on post page, check if it works for image (full span)
+- [ ] Fix scrollbar causing overflow on mobile (check desktop)
+- [ ] Layout shift from home -> posts, probably related to scrollbar
 
-### Functionality
+## Functionality
 
-- [ ] Implement Mobile Nav
-- [ ] Footer
+- [ ] Authentication & Authorization
+  - [ ] Protected routes
+  - [ ] 
 
 ## Possible Additions
 
 - [ ] SWR or React Query
 - [ ] React-hook-form
+- [ ] Next Auth
 
 
+## Readme
+
+- [ ] Features
+- [ ] Stack
+- [ ] The Why
+- [ ] The How

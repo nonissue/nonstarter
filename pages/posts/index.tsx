@@ -34,18 +34,22 @@ const FullbleedPost: React.FunctionComponent<Post> = ({
       {" "}
       <img
         alt="Users Hero"
-        src="https://picsum.photos/seed/non/2000/600?grayscale"
+        src="https://picsum.photos/seed/non/2000/700?grayscale"
       />
       <Heading size="lg" mb="2" mt="2" textTransform="capitalize">
-        {title}
+        {title} <Text fontStyle="italic">(featured post demo)</Text>
       </Heading>
       <Heading size="sm" fontWeight="normal" fontFamily="body" mb={3}>
         — {author}
       </Heading>
-      <Heading size="sm" fontFamily="cody">
+      <Heading size="sm" fontFamily="body">
         {tags}
       </Heading>
       <Text>{content}</Text>
+      <Text mt={2} fontStyle="italic" fontWeight="500">
+        (Notice how this post is &apos;full-bleed&apos; in that it break out of
+        the column the rest of the posts adhere to for their max width)
+      </Text>
     </Grid>
   );
 };
@@ -69,6 +73,13 @@ const posts: React.FunctionComponent<Posts> = () => {
             malesuada sed, accumsan nec sem.
           </Text>
         </Grid>
+        <FullbleedPost
+          title={demoTitle}
+          content={demoContent}
+          tags={[]}
+          author={"Andy"}
+          id={1}
+        />
         <Grid column="2" my="2" px={["4", "4", "2", "2"]}>
           <Heading size="lg" mb="2">
             The first time Yossarian saw the chaplain, he fell madly in love
@@ -96,13 +107,7 @@ const posts: React.FunctionComponent<Posts> = () => {
             &quot;It&apos;s the best there is,&quot; Doc Daneeka agreed.
           </Text>
         </Grid>
-        <FullbleedPost
-          title={demoTitle}
-          content={demoContent}
-          tags={[]}
-          author={"Andy"}
-          id={1}
-        />
+
         <Grid column="2" my="2" px={["4", "4", "2", "2"]}>
           <Heading size="lg" mb="2">
             He was an old man who fished alone in a skiff in the Gulf Stream and

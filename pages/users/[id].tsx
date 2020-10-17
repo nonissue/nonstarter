@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 
+import { Grid } from "@chakra-ui/core";
 import { User } from "../../interfaces";
 import { sampleUserData } from "../../utils/sample-data";
 import { Layout } from "../../components/Layout";
@@ -25,12 +26,10 @@ const StaticPropsDetail: React.FunctionComponent<Props> = ({
   }
 
   return (
-    <Layout
-      title={`${
-        item ? item.name : "User Detail"
-      } | Next.js + TypeScript Example`}
-    >
-      {item && <ListDetail item={item} />}
+    <Layout title={`${item ? item.name : "User Detail"} | Nonstarter`}>
+      <Grid maxW="min(65ch, 100%)" mx="auto" px={["4", "4", "2", "2"]} my="0">
+        {item && <ListDetail item={item} />}
+      </Grid>
     </Layout>
   );
 };
