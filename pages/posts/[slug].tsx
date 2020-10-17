@@ -2,6 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import { Grid, Heading, Text } from "@chakra-ui/core";
 import { Layout } from "../../components/Layout";
 // import { Post } from "../../interfaces";
+const prisma = new PrismaClient();
 
 /* @FIXME: Fix typings -> getServerSideProps, post 
 Maybe fixed? Since getServerSideProps is just returning JSON...
@@ -43,8 +44,6 @@ const PostPage: React.FunctionComponent<{ post: string }> = ({ post }) => {
 export const getServerSideProps = async (): Promise<{
   props: { post: string };
 }> => {
-  const prisma = new PrismaClient();
-
   const postResponse = await prisma.post.findOne({
     where: { id: 1 },
     include: { author: true }
