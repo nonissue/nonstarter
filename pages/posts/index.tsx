@@ -1,6 +1,7 @@
 import { Grid, Heading, Text, useColorModeValue } from "@chakra-ui/core";
 
 import { Layout } from "../../components/Layout";
+import { NextChakraLink } from "../../components/NextChakraLink";
 import { Post, Posts } from "../../interfaces";
 
 const demoTitle = "It Was Octarine, The Colour Of Magic";
@@ -8,11 +9,11 @@ const demoContent =
   "It was alive and glowing and vibrant and it was the undisputed pigment of the imagination, because wherever it appeared it was a sign that mere matter was a servant of the powers of the magical mind. It was enchantment itself. But Rincewind always thought it looked a sort of greenish-purple. It was all very well going on about pure logic and how the universe was ruled by logic and the harmony of numbers, but the plain fact of the matter was that the Disc was manifestly traversing space on the back of a giant turtle and the gods had a habit of going round to atheists' houses and smashing their windows.";
 
 const FullbleedPost: React.FunctionComponent<Post> = ({
-  id,
   author,
   tags,
   title,
-  content
+  content,
+  slug
 }) => {
   const bg = useColorModeValue("gray.900", "gray.100");
   const text = useColorModeValue("gray.100", "gray.900");
@@ -29,16 +30,18 @@ const FullbleedPost: React.FunctionComponent<Post> = ({
       m="auto"
       my="4"
       maxW={["100%", "100%", "100%", "75%"]}
-      key={id}
+      key={slug}
     >
       {" "}
       <img
         alt="Users Hero"
         src="https://picsum.photos/seed/non/2000/700?grayscale"
       />
-      <Heading size="lg" mb="2" mt="2" textTransform="capitalize">
-        {title} <Text fontStyle="italic">(featured post demo)</Text>
-      </Heading>
+      <NextChakraLink href="/posts/1">
+        <Heading size="lg" mb="2" mt="2" textTransform="capitalize">
+          {title} <Text fontStyle="italic">(featured post demo)</Text>
+        </Heading>
+      </NextChakraLink>
       <Heading size="sm" fontWeight="normal" fontFamily="body" mb={3}>
         — {author}
       </Heading>
@@ -59,9 +62,11 @@ const posts: React.FunctionComponent<Posts> = () => {
     <Layout>
       <Grid templateColumns={`1fr min(65ch, 100%) 1fr`}>
         <Grid column="2" my="4" px={["4", "4", "2", "2"]}>
-          <Heading size="lg" mb="2">
-            It Was a Dark and Stormy Night
-          </Heading>
+          <NextChakraLink href="/posts/1">
+            <Heading size="lg" mb="2">
+              It Was a Dark and Stormy Night
+            </Heading>
+          </NextChakraLink>
           <Text>
             A modern starting point for web dev, featuring next.js, chakra-ui,
             prisma and more. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -79,12 +84,15 @@ const posts: React.FunctionComponent<Posts> = () => {
           tags={[]}
           author={"Andy"}
           id={1}
+          slug={"slug"}
         />
         <Grid column="2" my="2" px={["4", "4", "2", "2"]}>
-          <Heading size="lg" mb="2">
-            The first time Yossarian saw the chaplain, he fell madly in love
-            with him
-          </Heading>
+          <NextChakraLink href="/posts/1">
+            <Heading size="lg" mb="2">
+              The first time Yossarian saw the chaplain, he fell madly in love
+              with him
+            </Heading>
+          </NextChakraLink>
           <Text>
             There was only one catch and that was Catch-22, which specified that
             a concern for one&apos;s safety in the face of dangers that were
@@ -109,10 +117,12 @@ const posts: React.FunctionComponent<Posts> = () => {
         </Grid>
 
         <Grid column="2" my="2" px={["4", "4", "2", "2"]}>
-          <Heading size="lg" mb="2">
-            He was an old man who fished alone in a skiff in the Gulf Stream and
-            he had gone eighty-four days now without taking a fish
-          </Heading>
+          <NextChakraLink href="/posts/1">
+            <Heading size="lg" mb="2">
+              He was an old man who fished alone in a skiff in the Gulf Stream
+              and he had gone eighty-four days now without taking a fish
+            </Heading>
+          </NextChakraLink>
           <Text>
             In the first forty days a boy had been with him. But after forty
             days without a fish the boy’s parents had told him that the old man

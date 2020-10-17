@@ -1,25 +1,60 @@
+import { PrismaClient } from "@prisma/client";
 import { Grid, Heading, Text } from "@chakra-ui/core";
 import { Layout } from "../../components/Layout";
-import { Post } from "../../interfaces";
+// import { Post } from "../../interfaces";
 
-// Move to interfaces
+/* @FIXME: Fix typings -> getServerSideProps, post 
+Maybe fixed? Since getServerSideProps is just returning JSON...
+Ugly though, and no typesafety
+*/
 
-const post: React.FunctionComponent<Post> = () => {
+const PostPage: React.FunctionComponent<{ post: string }> = ({ post }) => {
+  if (!post) {
+    return <Layout>Loading...</Layout>;
+  }
+
+  const postData = JSON.parse(post);
+
   return (
     <Layout>
-      <Grid templateColumns={`1fr min(65ch, 100%) 1fr`}>
-        <Grid column="2">
-          <Heading>Post 1</Heading>
-        </Grid>
-        <Grid column="2">
-          <Text>This is a post!</Text>
+      <Grid templateColumns={`1fr min(65ch, 100%) 1fr`} rowGap={4}>
+        <Grid column="2" px={[4, 4, 2, 2]}>
+          <Heading>{postData.title}</Heading>
         </Grid>
         <Grid column="-1 / 1" w="100%">
-          <Text>This text is full-bleed</Text>
+          <img
+            alt="Users Hero"
+            src="https://picsum.photos/seed/non/2000/700?grayscale"
+          />
+        </Grid>
+        <Grid column="2" px={[4, 4, 2, 2]}>
+          <Heading size="sm" fontWeight="normal" fontFamily="body">
+            — {postData.author.name}
+          </Heading>
+        </Grid>
+        <Grid column="2" px={[4, 4, 2, 2]}>
+          <Text>{postData.content}</Text>
         </Grid>
       </Grid>
     </Layout>
   );
 };
 
-export default post;
+export const getServerSideProps = async (): Promise<{
+  props: { post: string };
+}> => {
+  const prisma = new PrismaClient();
+
+  const postResponse = await prisma.post.findOne({
+    where: { id: 1 },
+    include: { author: true }
+  });
+
+  const json = await JSON.stringify(postResponse);
+
+  return {
+    props: { post: json }
+  };
+};
+
+export default PostPage;

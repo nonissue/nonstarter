@@ -15,6 +15,7 @@ export type Post = {
   content: string;
   author: string;
   tags: string[];
+  slug: string;
 };
 
 export type Posts = {

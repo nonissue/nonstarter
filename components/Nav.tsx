@@ -9,6 +9,8 @@ type Props = {
   setMobileNavShown: (bool: boolean) => void;
 };
 
+// Can we render mobile nav in here?
+// or should mobile nav be its own component altogether?
 export const Nav: React.FunctionComponent<Props> = ({
   mobileNavShown,
   setMobileNavShown

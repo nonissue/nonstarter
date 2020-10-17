@@ -16,15 +16,21 @@
 - [ ] Demo Content
   - [ ] Blog
 
+## Typescript
+
+- [ ] Figure out post/next typings (see [slug].tsx)
+  - [ ] Is it okay to just expect a string we parse?
+
 ## Prisma
 
 - [ ] Add Tags
-- [ ] Add Posts
+- [x] Add Posts
+- [ ] Slugify post title to create url
 
 ## Components
 
 - [ ] Post *Is this strictly necessary? Maybe not*
-  - [ ] Display
+  - [x] Display
   - [ ] Create
   - [ ] Edit
 - [ ] Dashboard
@@ -52,14 +58,12 @@
 
 - [ ] Authentication & Authorization
   - [ ] Protected routes
-  - [ ] 
 
 ## Possible Additions
 
 - [ ] SWR or React Query
 - [ ] React-hook-form
 - [ ] Next Auth
-
 
 ## Readme
 
