@@ -18,7 +18,6 @@ export const ColorModeToggle: React.FunctionComponent = (
   return (
     <IconButton
       size="sm"
-      // fontSize='md'
       variant="ghost"
       color="current"
       marginLeft="2"

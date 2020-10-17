@@ -12,12 +12,16 @@
 - [ ] Add basic tests
 - [ ] Simple tests
 - [ ] Add auth?
+- [ ] Demo Content
+  - [ ] Blog
+
 
 ### Styling 
 
 - [ ] Abstract layout padding/width implementation to either component wrapper or reusable variable
   - [ ] increase X padding on smaller viewports
 - [ ] Transitions/hover for links, menu
+- [ ] Handle custom colors in dark/light modes
 
 ### Functionality
 

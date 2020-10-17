@@ -1,9 +1,49 @@
-import { Grid, Heading, Text } from "@chakra-ui/core";
+import { Grid, Heading, Text, useColorModeValue } from "@chakra-ui/core";
 
 import { Layout } from "../../components/Layout";
-import { Posts } from "../../interfaces";
+import { Post, Posts } from "../../interfaces";
 
-// Move to interfaces
+const demoTitle = "It Was Octarine, The Colour Of Magic";
+const demoContent =
+  "It was alive and glowing and vibrant and it was the undisputed pigment of the imagination, because wherever it appeared it was a sign that mere matter was a servant of the powers of the magical mind. It was enchantment itself. But Rincewind always thought it looked a sort of greenish-purple. It was all very well going on about pure logic and how the universe was ruled by logic and the harmony of numbers, but the plain fact of the matter was that the Disc was manifestly traversing space on the back of a giant turtle and the gods had a habit of going round to atheists' houses and smashing their windows.";
+
+const FullbleedPost: React.FunctionComponent<Post> = ({
+  id,
+  author,
+  tags,
+  title,
+  content
+}) => {
+  const bg = useColorModeValue("gray.900", "gray.100");
+  const text = useColorModeValue("gray.100", "gray.900");
+
+  return (
+    <Grid
+      column="-1 / 1"
+      w="100%"
+      textColor={text}
+      background={bg}
+      p={["4", "4", "6", "6"]}
+      pt={["4", "4", "5", "5"]}
+      pb={["4", "4", "5", "5"]}
+      m="auto"
+      my="4"
+      maxW={["100%", "100%", "100%", "75%"]}
+      key={id}
+    >
+      <Heading size="lg" mb="2" textTransform="capitalize">
+        {title}
+      </Heading>
+      <Heading size="sm" fontWeight="normal" fontFamily="body" mb={3}>
+        — {author}
+      </Heading>
+      <Heading size="sm" fontFamily="cody">
+        {tags}
+      </Heading>
+      <Text>{content}</Text>
+    </Grid>
+  );
+};
 
 const posts: React.FunctionComponent<Posts> = () => {
   return (
@@ -27,7 +67,7 @@ const posts: React.FunctionComponent<Posts> = () => {
         <Grid column="2" my="2" px={["4", "4", "2", "2"]}>
           <Heading size="lg" mb="2">
             The first time Yossarian saw the chaplain, he fell madly in love
-            with him.
+            with him
           </Heading>
           <Text>
             There was only one catch and that was Catch-22, which specified that
@@ -41,47 +81,27 @@ const posts: React.FunctionComponent<Posts> = () => {
             he was sane and had to. Yossarian was moved very deeply by the
             absolute simplicity of this clause of Catch-22 and let out a
             respectful whistle.
-            <br />
-            <br />
-            <p>
-              &quot;That&apos;s some catch, that Catch-22,&quot; he observed.
-            </p>
-            <br />
-            <p>&quot;It&apos;s the best there is,&quot; Doc Daneeka agreed.</p>
           </Text>
-        </Grid>
-        <Grid
-          column="-1 / 1"
-          w="100%"
-          textColor="white"
-          background="gray.900"
-          p={["4", "4", "3", "3"]}
-          pt={["3", "3", "3", "2"]}
-          pb={["3", "3", "5", "4"]}
-          m="auto"
-          my="4"
-          maxW={["100%", "100%", "100%", "75%"]}
-        >
-          <Heading size="lg" mb="2">
-            It was octarine, the colour of magic.
-          </Heading>
+          <br />
           <Text>
-            It was alive and glowing and vibrant and it was the undisputed
-            pigment of the imagination, because wherever it appeared it was a
-            sign that mere matter was a servant of the powers of the magical
-            mind. It was enchantment itself. But Rincewind always thought it
-            looked a sort of greenish-purple. It was all very well going on
-            about pure logic and how the universe was ruled by logic and the
-            harmony of numbers, but the plain fact of the matter was that the
-            Disc was manifestly traversing space on the back of a giant turtle
-            and the gods had a habit of going round to atheists&apos; houses and
-            smashing their windows.
+            &quot;That&apos;s some catch, that Catch-22,&quot; he observed.
+          </Text>
+          <br />
+          <Text>
+            &quot;It&apos;s the best there is,&quot; Doc Daneeka agreed.
           </Text>
         </Grid>
+        <FullbleedPost
+          title={demoTitle}
+          content={demoContent}
+          tags={[]}
+          author={"Andy"}
+          id={1}
+        />
         <Grid column="2" my="2" px={["4", "4", "2", "2"]}>
           <Heading size="lg" mb="2">
             He was an old man who fished alone in a skiff in the Gulf Stream and
-            he had gone eighty-four days now without taking a fish.
+            he had gone eighty-four days now without taking a fish
           </Heading>
           <Text>
             In the first forty days a boy had been with him. But after forty

@@ -12,7 +12,6 @@ import { Layout } from "../components/Layout";
 import { NextChakraLink } from "../components/NextChakraLink";
 
 const IndexPage: React.FunctionComponent = () => (
-  // <Chakra cookies={cookies}>
   <Layout>
     <Grid maxW="min(65ch, 100%)" mx="auto" px={["4", "4", "2", "2"]} my="0">
       <Stack spacing={3} my="4">
@@ -46,8 +45,6 @@ const IndexPage: React.FunctionComponent = () => (
           </Text>
         </Stack>
       </Stack>
-      {/* </Grid> */}
-      {/* </Box> */}
     </Grid>
   </Layout>
   // </Chakra>
