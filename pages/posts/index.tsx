@@ -24,14 +24,19 @@ const FullbleedPost: React.FunctionComponent<Post> = ({
       textColor={text}
       background={bg}
       p={["4", "4", "6", "6"]}
-      pt={["4", "4", "5", "5"]}
-      pb={["4", "4", "5", "5"]}
+      pt={["4", "4", "6", "6"]}
+      pb={["4", "4", "6", "6"]}
       m="auto"
       my="4"
       maxW={["100%", "100%", "100%", "75%"]}
       key={id}
     >
-      <Heading size="lg" mb="2" textTransform="capitalize">
+      {" "}
+      <img
+        alt="Users Hero"
+        src="https://picsum.photos/seed/non/2000/600?grayscale"
+      />
+      <Heading size="lg" mb="2" mt="2" textTransform="capitalize">
         {title}
       </Heading>
       <Heading size="sm" fontWeight="normal" fontFamily="body" mb={3}>
