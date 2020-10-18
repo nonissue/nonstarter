@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { GetStaticPaths } from "next";
 import { Grid, Heading, Text } from "@chakra-ui/core";
 import { Layout } from "../../components/Layout";
 // import { Post } from "../../interfaces";
@@ -41,7 +42,14 @@ const PostPage: React.FunctionComponent<{ post: string }> = ({ post }) => {
   );
 };
 
-export const getServerSideProps = async (): Promise<{
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [{ params: { slug: "1234" } }],
+    fallback: false
+  };
+};
+
+export const getStaticProps = async (): Promise<{
   props: { post: string };
 }> => {
   const postResponse = await prisma.post.findOne({
