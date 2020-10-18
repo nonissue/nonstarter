@@ -19,8 +19,9 @@
 
 ## Bugs
 
-- [ ] SQLite doesn't work on vercel?
-  - [ ] DB ENV issue?
+- [x] SQLite doesn't work on vercel?
+  - [x] DB ENV issue?
+  - [x] FIXED, I think by changing `DATABASE_URL="file:./dev.db"` to `DATABASE_URL="file:dev.db"`
 
 ## Typescript
 
