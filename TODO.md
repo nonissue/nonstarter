@@ -15,6 +15,12 @@
 - [ ] Refactor style implementation to make it consistent sitewide, rather than hodgepodge of custom tweaks as it is ATM
 - [ ] Demo Content
   - [ ] Blog
+- [ ] State: https://github.com/pmndrs/jotai
+
+## Bugs
+
+- [ ] SQLite doesn't work on vercel?
+  - [ ] DB ENV issue?
 
 ## Typescript
 
