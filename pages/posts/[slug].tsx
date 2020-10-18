@@ -44,7 +44,7 @@ const PostPage: React.FunctionComponent<{ post: string }> = ({ post }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [{ params: { slug: "1234" } }],
+    paths: [{ params: { slug: "1" } }],
     fallback: false
   };
 };
